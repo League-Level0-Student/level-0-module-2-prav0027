@@ -6,7 +6,6 @@ import java.applet.AudioClip;
 
 //Level 0
 
-
 import javax.swing.JApplet;
 import javax.swing.JOptionPane;
 
@@ -16,7 +15,18 @@ public class AnimalFarm {
 		/*
 		 * 1. Ask the user which animal they want, then play the sound of that animal.
 		 */
-		
+		for (int i = 0; i < 10000; i++) {
+			String answer = JOptionPane.showInputDialog("Which animal do you want: cow, duck, or dog?");
+			if (answer.equals("cow")) {
+				playMoo();
+			}
+			if (answer.equals("duck")) {
+				playQuack();
+			}
+			if (answer.equals("dog")) {
+				playWoof();
+			}
+		}
 		/* 2. Make it so that the user can keep entering new animals. */
 	}
 
